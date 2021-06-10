@@ -1,7 +1,8 @@
-import './sass/main.scss';
 import menus from './menu.json';
-import foodCard from '../src/templates/food-card.hbs';
+import foodCard from './templates/food-card.hbs';
+import './styles.css';
+
+const markup = foodCard(menus);
 
 const foodRef = document.querySelector('.js-menu');
-const markup = foodCard(menus);
 foodRef.insertAdjacentHTML('beforeend', markup);
